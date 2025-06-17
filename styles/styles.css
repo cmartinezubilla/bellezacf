@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+}
+
+header{
+    background-color: #ff0026;
+    height: 40vh;
+    position: sticky;
+    height: auto;
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
+    position: sticky;
+    top 20px;
+
+}
+
+ul{
+    display: flex;
+}
+
+.logo{
+    height: 60px;
+    width: auto;
+}
+
+h1{
+    color: white;
+    background-color:#ff0026;
+    font-size: 40px;
+    font-weight: 500;
+    top 10px;
+} 
+
+.enlace{
+    background-color:white;
+    height: 20px;
+    width: 70px;
+    font-size: 15px;
+    padding: 10px;
+    list-style: none;
+    border: 3px solid yellow;
+     
+} 
+
+
+a{
+    text-decoration: none;
+    color: orange; 
+    font-weight:bold;    
+}
+
+body{
+
+    h2{
+        color: black;
+        font-size: 25px;
+          /* margin-top: 150px;
+        margin-bottom: 10px; */
+    }
+    /* .imagen-carrusel{
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+    .imagen{
+        margin-top: 10px;
+        margin-bottom: 50px;
+    } */
+
+    h3{
+    color: white;
+    font-size: 15px;
+    }
+}
+
+.img{
+    height: 40px;
+}
+footer{
+    background-color: #ff0026;
+    height: 7vh;    
+    display: flex;
+    justify-content:space-around;
+}
+
+/*PAGINA MARCAS*/
+
+.imagen-marca{
+    height: 300px;
+    width: auto;
+}
+/* PAGINA BLOG */
+
+main{
+    margin-top: 50px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    
+}
+
+.imagen-blog{
+    height: 200px;
+    width: auto;
+}
+button{
+    color: white;
+    font-weight:bold;
+    background-color:#ff0026;
+    height: 30px;
+    width: 150px;
+    font-size: 15px;
+    padding: 5px 5px;
+    border: 3px solid orange;
+    
+}
+
+/* PAGINA CONTACTO */
+
+.formulario{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 5px solid orange;
+    width: 500px;
+}
