@@ -8,116 +8,119 @@
 
 header{
     background-color: #ff0026;
-    height: 40vh;
-    position: sticky;
-    height: auto;
     display: flex;
     flex-flow:row wrap;
     justify-content: space-between;
-    position: sticky;
-    top 20px;
+    h1{
+        color: white;
+        background-color:#ff0026;
+        font-size: 35px;
+        font-weight: bold;
+    } 
 
+    ul{
+        display: flex;
+    }
+
+    .logo{
+        height: 60px;
+        width: auto;
+    }
+
+    .enlace{
+        background-color:white;
+        height: 30px;
+        width: 100px;
+        font-size: 15px;
+        padding: 0px 10px;
+        list-style: none;
+        border: 3px solid #ffb600;
+        border-radius: 50px;
+        margin-top: 10px;
+    } 
+
+    a{
+        text-decoration: none;
+        color: #ff6a03; 
+        font-weight:bold;    
+    }
+    
 }
 
-ul{
+.main{
     display: flex;
-}
-
-.logo{
-    height: 60px;
-    width: auto;
-}
-
-h1{
-    color: white;
-    background-color:#ff0026;
-    font-size: 40px;
-    font-weight: 500;
-    top 10px;
-} 
-
-.enlace{
-    background-color:white;
-    height: 20px;
-    width: 70px;
-    font-size: 15px;
-    padding: 10px;
-    list-style: none;
-    border: 3px solid yellow;
-     
-} 
-
-
-a{
-    text-decoration: none;
-    color: orange; 
-    font-weight:bold;    
-}
-
-body{
-
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .imagen-carrusel{
+            height: 500px;
+            width: auto;
+    }
+    h5{
+        color: white;
+        font-weight: bold;
+        background-color:#ff6a03;
+    }
+    p{
+      color: white;
+      background-color:#ff0026;  
+    }
     h2{
-        color: black;
         font-size: 25px;
-          /* margin-top: 150px;
-        margin-bottom: 10px; */
     }
-    /* .imagen-carrusel{
-        margin-top: 10px;
-        margin-bottom: 50px;
-    }
-    .imagen{
-        margin-top: 10px;
-        margin-bottom: 50px;
-    } */
-
-    h3{
-    color: white;
-    font-size: 15px;
-    }
+ 
 }
 
-.img{
-    height: 40px;
-}
+
 footer{
     background-color: #ff0026;
     height: 7vh;    
     display: flex;
-    justify-content:space-around;
+    justify-content:center;
+    h3{
+        color: white;
+        font-size: 15px;
+    }
+    .img{
+        height: 40px;
+    }
 }
+
 
 /*PAGINA MARCAS*/
 
-.imagen-marca{
-    height: 300px;
+.main-marcas{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    h2{
+        font-size: 25px;
+    }
+    
+
+    .imagen-marca{
+    height: 100px;
     width: auto;
+
 }
+
+}
+
+/* PAGINA PREUNIC */
+
+
 /* PAGINA BLOG */
 
-main{
-    margin-top: 50px;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    justify-content: center;
-    
-}
-
 .imagen-blog{
+    margin-top: 50px; 
+    display: flex;
+    justify-content: space-between;
     height: 200px;
     width: auto;
+    gap: 10px;
 }
-button{
-    color: white;
-    font-weight:bold;
-    background-color:#ff0026;
-    height: 30px;
-    width: 150px;
-    font-size: 15px;
-    padding: 5px 5px;
-    border: 3px solid orange;
-    
-}
+
 
 /* PAGINA CONTACTO */
 
@@ -129,3 +132,14 @@ button{
     border: 5px solid orange;
     width: 500px;
 }
+.boton-formulario{
+        color: white;
+        font-weight:bold;
+        background-color:#ff0026;
+        height: 30px;
+        width: 150px;
+        font-size: 15px;
+        padding: 0px 30px;
+        border: 3px solid orange;
+        border-radius: 50px;
+} 
