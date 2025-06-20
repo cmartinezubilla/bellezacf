@@ -11,51 +11,55 @@ header{
     display: flex;
     flex-flow:row wrap;
     justify-content: space-between;
-    h1{
+    h1{ /*como hago que quede centrado*/
         color: white;
-        background-color:#ff0026;
         font-size: 35px;
         font-weight: bold;
-    } 
+    }
 
     ul{
         display: flex;
     }
 
     .logo{
-        height: 60px;
+        height: 10vh;
         width: auto;
     }
 
-    .enlace{
+    .nav-item{
         background-color:white;
         height: 30px;
         width: 100px;
         font-size: 15px;
-        padding: 0px 10px;
         list-style: none;
         border: 3px solid #ffb600;
         border-radius: 50px;
         margin-top: 10px;
-    } 
-
-    a{
-        text-decoration: none;
-        color: #ff6a03; 
-        font-weight:bold;    
     }
-    
+
+    .nav-link{
+        color: #ff6a03;
+        font-weight: bold;
+        padding: 0px 20px;
+    }
+
+}
+
+.navbar navbar-expand-lg bg-body-tertiary{
+    background-color: #ff0026;
+}
+
+.container-fluid{ /*no puedo hacer que quede todo rojo, queda gris*/
+    background-color:#ff0026;
+    height: 10vh;
+    width: auto;
 }
 
 .main{
     display: flex;
-    justify-content: center;
+    flex-flow: column;
     margin-top: 20px;
     margin-bottom: 20px;
-    .imagen-carrusel{
-            height: 500px;
-            width: auto;
-    }
     h5{
         color: white;
         font-weight: bold;
@@ -63,83 +67,123 @@ header{
     }
     p{
       color: white;
-      background-color:#ff0026;  
+      background-color:#ff0026;
     }
-    h2{
+}    
+
+h2{
         font-size: 25px;
-    }
- 
+        font-weight: bold;
+        justify-content: center;
+        margin-bottom: 20px;
+
 }
 
 
+
+.imagen-carrusel{
+    display: flex;
+    flex-flow: column;
+    height: 75vh;
+    width: auto;
+    justify-content: center; /*no puedo hacer que quede al centro */
+}
+
 footer{
     background-color: #ff0026;
-    height: 7vh;    
+    height: 7vh;
     display: flex;
-    justify-content:center;
+    justify-content:space-between;
     h3{
         color: white;
         font-size: 15px;
+
     }
+
     .img{
         height: 40px;
     }
+
+}
+
+.rrss{
+        display: flex;
+        justify-content:end;
 }
 
 
 /*PAGINA MARCAS*/
 
-.main-marcas{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.imagen-marcas{
+    margin-top: 20 px;
     margin-bottom: 20px;
-    h2{
-        font-size: 25px;
-    }
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
 
-    .imagen-marca{
-    height: 100px;
-    width: auto;
+.marca{
+        height: auto;
+        width: 50vh;
+        gap: 30 px;        /*no puedo hacer que se separen */ 
 
 }
 
-}
+
+
 
 /* PAGINA PREUNIC */
+
 
 
 /* PAGINA BLOG */
 
 .imagen-blog{
-    margin-top: 50px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
-    justify-content: space-between;
-    height: 200px;
+    justify-content: center; /*no lo puedo centrar */
+    height: 40vh;
     width: auto;
     gap: 10px;
 }
+
+.boton-sus{
+    color: white;
+    font-weight:bold;
+    background-color:#ff0026;
+    height: 30px;
+    width: 150px;
+    font-size: 15px;
+    padding: 0px 30px;
+    border: 3px solid orange;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center; /*no lo puedo centrar */
+}
+
 
 
 /* PAGINA CONTACTO */
 
 .formulario{
     display: flex;
-    flex-flow: column;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     border: 5px solid orange;
     width: 500px;
 }
 .boton-formulario{
-        color: white;
-        font-weight:bold;
-        background-color:#ff0026;
-        height: 30px;
-        width: 150px;
-        font-size: 15px;
-        padding: 0px 30px;
-        border: 3px solid orange;
-        border-radius: 50px;
-} 
+    color: white;
+    font-weight:bold;
+    background-color:#ff0026;
+    height: 30px;
+    width: 150px;
+    font-size: 15px;
+    padding: 0px 30px;
+    border: 3px solid orange;
+    border-radius: 50px;
+}
+

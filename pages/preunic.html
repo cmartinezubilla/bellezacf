@@ -6,6 +6,7 @@
     <title>Preunic</title>
     <link rel="shortcut icon" href="../assets/logopu.jpg" type="image/x-icon">
     <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 <body>
 <header>
@@ -14,33 +15,40 @@
     </a>
     
     <h1>Mundo Cruelty Free en Preunic</h1>
-    
-    <nav>
-        <ul>
-            <li class="enlace">
-                <a href="../index.html">Home</a>
-            </li>
-            
-            <li class="enlace">
-                <a href="../pages/marcas.html">Marcas</a>
-            </li>
-            
-            <li class="enlace">
-                <a href="../pages/blog.html">Blog CF</a>
-            </li>
-            
-            <li class="enlace">
-                <a href="../pages/contacto.html">Contacto</a>
-            </li>
-        </ul>
+   
+<!-- Menu hamburguesa -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/marcas.html">Marcas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/blog.html">Blog CF</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 </header>
 
 <main class="main">
     <h2>¡En Preunic.cl puedes encontrar todas las marcas CF que buscas!</h2>   
-    <h2> Somos el retail chileno CON MÁS MARCAS LIBRES DE CRUELDAD 🐇</h2>
+    <h2> Somos el retail chileno con MÁS MARCAS LIBRES DE CRUELDAD 🐇</h2>
     
-    <!-- CARRUSEL -->
+<!-- CARRUSEL -->
+
     <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -90,15 +98,19 @@
 <footer>
     <h3>Derechos reservados</h3>
     <!-- Redes sociales -->
-    <a href="https://www.facebook.com/preunic">
-        <img src="../assets/fb.jpg" alt="Facebook" class="img">
-    </a>
-    <a href="https://www.instagram.com/preunic_cl">
-        <img src="../assets/insta.jpg" alt="Instagram" class="img">
-    </a>
-    <a href="https://www.youtube.com/@PreunicChile">
-        <img src="../assets/youtube.jpg" alt="Youtube" class="img">
-    </a>
+    <section class="rrss">
+        <a href="https://www.facebook.com/preunic">
+            <img src="../assets/fb.jpg" alt="Facebook" class="img">
+        </a>
+        <a href="https://www.instagram.com/preunic_cl">
+            <img src="../assets/insta.jpg" alt="Instagram" class="img">
+        </a>
+        <a href="https://www.youtube.com/@PreunicChile">
+            <img src="../assets/youtube.jpg" alt="Youtube" class="img">
+        </a>
+    </section>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
