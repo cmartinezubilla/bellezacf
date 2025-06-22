@@ -11,10 +11,11 @@ header{
     display: flex;
     flex-flow:row wrap;
     justify-content: space-between;
-    h1{ /*como hago que quede centrado*/
+    h1{ 
         color: white;
-        font-size: 35px;
+        font-size: 40px;
         font-weight: bold;
+        margin-top: 3vh;
     }
 
     ul{
@@ -42,20 +43,24 @@ header{
         font-weight: bold;
         padding: 0px 20px;
     }
-
+    
 }
 
+/* barra de navegación */
 .navbar navbar-expand-lg bg-body-tertiary{
-    background-color: #ff0026;
-}
-
-.container-fluid{ /*no puedo hacer que quede todo rojo, queda gris*/
     background-color:#ff0026;
     height: 10vh;
     width: auto;
 }
 
-.main{
+.container-fluid{ 
+    background-color:#ff0026;
+    height: 10vh;
+    width: auto;
+    
+}
+
+main{
     display: flex;
     flex-flow: column;
     margin-top: 20px;
@@ -69,16 +74,7 @@ header{
       color: white;
       background-color:#ff0026;
     }
-}    
-
-h2{
-        font-size: 25px;
-        font-weight: bold;
-        justify-content: center;
-        margin-bottom: 20px;
-
 }
-
 
 
 .imagen-carrusel{
@@ -86,7 +82,8 @@ h2{
     flex-flow: column;
     height: 75vh;
     width: auto;
-    justify-content: center; /*no puedo hacer que quede al centro */
+    justify-content: center;
+    justify-self: center;
 }
 
 footer{
@@ -94,9 +91,11 @@ footer{
     height: 7vh;
     display: flex;
     justify-content:space-between;
+    align-items: center;
     h3{
         color: white;
         font-size: 15px;
+        font-weight: bold;
 
     }
 
@@ -111,42 +110,52 @@ footer{
         justify-content:end;
 }
 
+.h2-1{
+    color: #ff6a03;
+    font-size: 35px;
+    font-weight: bolder;
+    justify-self: center;  
+    align-self: center;
+    margin-top: 3vh;      
+}
+
+.h2-2{
+    color: #ff0026;
+    font-size: 30px;
+    justify-self: center;  
+    margin-bottom: 3vh; 
+    align-self: center;    
+}
 
 /*PAGINA MARCAS*/
 
-.imagen-marcas{
+.marcas{
     margin-top: 20 px;
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 15px;
    
 }
 
-.marca{
-        height: auto;
-        width: 50vh;
-        gap: 30 px;        /*no puedo hacer que se separen */ 
-
+.imagen-marcas{
+    height: auto;
+    width: 50vh;
 }
-
-
-
-
-/* PAGINA PREUNIC */
-
 
 
 /* PAGINA BLOG */
 
 .imagen-blog{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center; /*no lo puedo centrar */
-    height: 40vh;
-    width: auto;
-    gap: 10px;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+    gap: 15px;
+    height: 50vh;
+    width: 30vh;
+    display: flex; /*no puedo hacer que quede centrado*/
+    justify-content: space-around;
+  
 }
 
 .boton-sus{
@@ -160,9 +169,9 @@ footer{
     border: 3px solid orange;
     border-radius: 50px;
     display: flex;
-    justify-content: center; /*no lo puedo centrar */
+    align-self: center;
+    margin-bottom: 3vh;
 }
-
 
 
 /* PAGINA CONTACTO */
@@ -174,16 +183,22 @@ footer{
     align-items: center;
     border: 5px solid orange;
     width: 500px;
+    justify-self: center;
 }
+
 .boton-formulario{
+    display: flex;
+    justify-self: center;
     color: white;
     font-weight:bold;
     background-color:#ff0026;
     height: 30px;
     width: 150px;
     font-size: 15px;
-    padding: 0px 30px;
+    padding: 0px 45px;
     border: 3px solid orange;
     border-radius: 50px;
+    margin-top: 1vh;
+     
 }
 
