@@ -11,11 +11,12 @@ header{
     display: flex;
     flex-flow:row wrap;
     justify-content: space-between;
+    height: 15vh;
     h1{ 
         color: white;
         font-size: 40px;
         font-weight: bold;
-        margin-top: 3vh;
+        margin-top: 4vh;
     }
 
     ul{
@@ -23,6 +24,7 @@ header{
     }
 
     .logo{
+        margin-top: 5px;
         height: 10vh;
         width: auto;
     }
@@ -35,7 +37,6 @@ header{
         list-style: none;
         border: 3px solid #ffb600;
         border-radius: 50px;
-        margin-top: 10px;
     }
 
     .nav-link{
@@ -47,15 +48,10 @@ header{
 }
 
 /* barra de navegación */
-.navbar navbar-expand-lg bg-body-tertiary{
-    background-color:#ff0026;
-    height: 10vh;
-    width: auto;
-}
 
 .container-fluid{ 
     background-color:#ff0026;
-    height: 10vh;
+    height: 13.7vh;
     width: auto;
     
 }
@@ -69,10 +65,15 @@ main{
         color: white;
         font-weight: bold;
         background-color:#ff6a03;
+        justify-content: center;
+        justify-items: center;
+        width: auto;
+        font-size:25px;
     }
     p{
       color: white;
       background-color:#ff0026;
+      font-size: 20px;
     }
 }
 
@@ -81,10 +82,11 @@ main{
     display: flex;
     flex-flow: column;
     height: 75vh;
-    width: auto;
+    width: 150vh;
     justify-content: center;
     justify-self: center;
 }
+
 
 footer{
     background-color: #ff0026;
@@ -144,18 +146,31 @@ footer{
     width: 50vh;
 }
 
+/*PAGINA PREUNIC*/
+
+.imagen-carrusel-2{
+    display: flex;
+    flex-flow: column;
+    height: 75vh;
+    width: auto;
+    justify-content: center;
+    justify-self: center;
+}
 
 /* PAGINA BLOG */
 
 .imagen-blog{
     margin-top: 7vh;
     margin-bottom: 7vh;
-    gap: 15px;
-    height: 50vh;
-    width: 30vh;
-    display: flex; /*no puedo hacer que quede centrado*/
-    justify-content: space-around;
-  
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.entrada{
+    height: 30vh;
+    width: 60vh;
 }
 
 .boton-sus{
@@ -199,6 +214,211 @@ footer{
     border: 3px solid orange;
     border-radius: 50px;
     margin-top: 1vh;
-     
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 375px){
+    /* INDEX */
+    header{
+        justify-content: space-evenly;
+        
+        h1{ 
+            font-size: 17px;
+            font-weight: bold;
+            margin-top: 1vh;
+        }
+        
+        .logo{
+            height: 7vh;
+            width: auto;
+        }
+
+        height: 16vh;
+        margin-bottom: 22vh;
+        
+        .nav-item{
+            background-color:white;
+            height: 20px;
+            width: 80px;
+            font-size: 13px;
+            list-style: none;
+            border: 2px solid #ffb600;
+            border-radius: 10px;
+        }
+
+        .nav-link{
+            color: #ff6a03;
+            font-weight: bold;
+            padding: 0px 10px;
+        }
+         
+    }
+
+    .container-fluid{ 
+        background-color:white;
+        height: 25px;
+        width: 25px;
+    }
+        
+    .navbar-toggler{
+        height: 30px;
+        width: 30px;
+    }
+
+    .collapse navbar-collapse{
+        background-color:white;
+        height: 25px;
+        width: 25px;
+    }
+
+    .navbar-toggler-icon{
+        background-color:white;
+        height: 20px;
+        width: 20px;
+    }
+
+    
+    .imagen-carrusel{
+        height: 40vh;
+        width: auto;
+    }
+
+    main{ /*no se ve esto*/
+        h5{
+            font-size:15px;
+        }
+
+        p{
+            font-size: 10px;
+        }
+    }
+
+    footer{
+        height: 5vh;
+        h3{
+            font-size: 10px;
+        }
+
+        .img{
+            height: 25px;
+        }
+    }
+
+    /* MARCAS */
+
+    .h2-1{
+        font-size: 25px;
+        font-weight: bolder;
+        margin-top: 0vh;
+    }
+
+    .h2-2{
+        font-size: 20px;
+        margin-bottom: 5vh;
+    }
+
+    .marcas{
+        margin-bottom: 15px;
+        gap: 10px;
+   
+    }
+
+    .imagen-marcas{
+        height: 30vh;
+        width: 50vh;
+    }
+        
+    
+    /* BLOG */
+
+    .imagen-blog{
+        flex-direction: column;
+        margin-bottom: 7vh;
+        gap: 10px;
+    }
+
+    /* CONTACTO */
+
+    
+    .formulario{
+        width: 300px;
+        padding: 10px 0px;
+    }
+
+    .boton-formulario{
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+    }
+
+}
+
+@media (max-width: 990px) {
+    Header{
+        h1{ 
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 3vh;
+            margin-bottom: 3vh;
+            
+        }
+
+        height: 13vh;
+        margin-bottom: 22vh;
+    }
+
+    .container-fluid{ 
+        background-color: white;
+        height: 7vh;
+        width:  7h;
+    }
+
+    main{
+        h5{
+            font-size:20px;
+        }
+    
+        p{
+            font-size: 15px;
+        }
+    }
+    
+    footer{
+        height: 8vh;
+        h3{
+            font-size: 13px;
+        }
+    }
+
+    .img{
+        height: 20px;
+    }
+
+    /* MARCAS */
+
+    .h2-1{
+        font-size: 33px;
+        font-weight: bolder;
+        margin-top: 0vh;
+    }
+
+    .h2-2{
+        font-size: 28px;
+        margin-bottom: 3vh;
+    }
+
+
+    .marcas{
+        margin-bottom: 10vh;
+        gap: 15px;
+   
+    }
+
+    /* CONTACTO */
+
+    .formulario{
+        padding: 10px 0px;
+    }
+    
 }
 
