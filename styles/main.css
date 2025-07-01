@@ -6,54 +6,6 @@
     font-family: "Open Sans";
 }
 
-header{
-    background-color: #ff0026;
-    display: flex;
-    flex-flow:row wrap;
-    justify-content: space-between;
-    height: 16vh;
-    h1{
-        color: white;
-        font-size: 40px;
-        font-weight: bold;
-        margin-top: 4vh;
-    }
-
-    ul{
-        display: flex;
-    }
-
-    .logo{
-        margin-top: 5px;
-        height: 10vh;
-        width: auto;
-    }
-
-    .nav-item{
-        background-color:white;
-        height: 30px;
-        width: 100px;
-        font-size: 15px;
-        list-style: none;
-        border: 3px solid #ffb600;
-        border-radius: 50px;
-    }
-
-    .nav-link{
-        color: #ff6a03;
-        font-weight: bold;
-        padding: 0px 20px;
-    }
-
-}
-
-/* barra de navegación */
-
-.container-fluid{
-    background-color:#ff0026;
-    height: 14vh;
-}
-
 main{
     display: flex;
     flex-flow: column;
@@ -83,7 +35,7 @@ main{
     width: 60vw;
     justify-content: center;
     justify-self: center;
-
+   
 }
 
 
@@ -91,41 +43,17 @@ main{
     color: #ff6a03;
     font-size: 35px;
     font-weight: bolder;
-    justify-self: center;
+    justify-self: center;  
     align-self: center;
-    margin-top: 3vh;
+    margin-top: 3vh;      
 }
 
 .h2-2{
     color: #ff0026;
     font-size: 30px;
-    justify-self: center;
-    margin-bottom: 3vh;
-    align-self: center;
-}
-
-footer{
-    background-color: #ff0026;
-    height: 7vh;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    h3{
-        color: white;
-        font-size: 15px;
-        font-weight: bold;
-
-    }
-
-    .img{
-        height: 40px;
-    }
-
-}
-
-.rrss{
-        display: flex;
-        justify-content:end;
+    justify-self: center;  
+    margin-bottom: 3vh; 
+    align-self: center;    
 }
 
 /*PAGINA MARCAS*/
@@ -137,7 +65,7 @@ footer{
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-
+   
 }
 
 .imagen-marcas{
@@ -207,73 +135,18 @@ footer{
     font-weight:bold;
     background-color:#ff0026;
     height: 30px;
-    width: 100px;
+    width: 150px;
     font-size: 15px;
-    padding: 0px 25px;
+    padding: 0px 45px;
     border: 3px solid orange;
     border-radius: 50px;
     margin-top: 1vh;
 }
 
-.boton-formulario:hover{
-    animation: vibrate 0.5s infinite;
-}
-
-@keyframes vibrate{
-    0%{
-        transform: translateX(0);
-    }
-    25%{
-        transform: translateX(5px);
-    }
-    50%{
-        transform: translateX(0);
-    }
-
-    75%{
-        transform: translateX(5px);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
-
-
-
-
-/* RESPONSIVE */
+/* RESPONSIVE   MOBILE */
 
 @media(max-width: 375px){
-    /* INDEX */
-    header{
-        justify-content: space-evenly;
-        h1{
-            font-size: 17px;
-            font-weight: bold;
-            margin-top: 1vh;
-        }
-
-        .logo{
-            height: 7vh;
-            width: auto;
-        }
-
-        /* height: auto;
-        margin-bottom: 22vh; */
-
-
-    }
-
-    .container-fluid{
-        height: 30px;
-    }
-
-    .navbar-toggler{
-        height: 30px;
-        width: 30px;
-    } 
-
-  
+    
     .imagen-carrusel{
         height: 40vh;
         width: 100vw;
@@ -286,17 +159,6 @@ footer{
 
         p{
             font-size: 10px;
-        }
-    }
-
-    footer{
-        height: 5vh;
-        h3{
-            font-size: 10px;
-        }
-
-        .img{
-            height: 25px;
         }
     }
 
@@ -316,15 +178,15 @@ footer{
     .marcas{
         margin-bottom: 15px;
         gap: 10px;
-
+   
     }
 
     .imagen-marcas{
         height: 30vh;
         width: 60vw;
     }
-
-
+        
+    
     /* BLOG */
 
     .imagen-blog{
@@ -335,7 +197,7 @@ footer{
 
     /* CONTACTO */
 
-
+    
     .formulario{
         width: 300px;
         padding: 10px 0px;
@@ -348,43 +210,27 @@ footer{
 
 }
 
+/* RESPONSIVE   TABLET */
 
-/*@media (max-width: 990px) {
-    Header{
-        h1{
-            font-size: 30px;
-            font-weight: bold;
-            margin-bottom: 3vh;
-
-        }
-
-    }
-
-   
+@media (max-width: 990px) {
+    
     main{
         h5{
             font-size:20px;
         }
-
+    
         p{
             font-size: 15px;
         }
     }
-
-    footer{
-        height: 8vh;
-        h3{
-            font-size: 13px;
-        }
-    }
-
+    
     .img{
         height: 20px;
     }
 
     /* MARCAS */
 
-    /*h2-1{
+    h2-1{
         font-size: 33px;
         font-weight: bolder;
         margin-top: 0vh;
@@ -395,11 +241,10 @@ footer{
         margin-bottom: 3vh;
     }
 
-
     .marcas{
         margin-bottom: 10vh;
         gap: 15px;
-
+   
     }
 
     .imagen-marcas{
@@ -414,11 +259,10 @@ footer{
         gap: 5px;
     }
 
-
     /* CONTACTO */
 
     .formulario{
         padding: 10px 0px;
     }
-
-}*/
+    
+}

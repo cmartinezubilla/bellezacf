@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+}
+
+header{
+    background-color: #ff0026;
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
+    height: 15vh;
+    h1{ 
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        margin-top: 4vh;
+    }
+
+    ul{
+        display: flex;
+    }
+
+    .logo{
+        margin-top: 5px;
+        height: 10vh;
+        width: auto;
+    }
+
+    .nav-item{
+        background-color:white;
+        height: 30px;
+        width: 100px;
+        font-size: 15px;
+        list-style: none;
+        border: 3px solid #ffb600;
+        border-radius: 50px;
+    }
+
+    .nav-link{
+        color: #ff6a03;
+        font-weight: bold;
+        padding: 0px 20px;
+    }
+    
+}
+
+/*RESPONSIVE MOBILE*/
+
+@media(max-width: 375px){
+    /* INDEX */
+    header{
+        justify-content: space-evenly;
+        h1{ 
+            font-size: 17px;
+            font-weight: bold;
+            margin-top: 1vh;
+        }
+        
+        .logo{
+            height: 7vh;
+            width: auto;
+        }
+
+        height: 16vh;
+        margin-bottom: 22vh;
+        
+        .nav-item{
+            background-color:white;
+            height: 20px;
+            width: 80px;
+            font-size: 13px;
+            list-style: none;
+            border: 2px solid #ffb600;
+            border-radius: 10px;
+        }
+
+        .nav-link{
+            color: #ff6a03;
+            font-weight: bold;
+            padding: 0px 10px;
+        }
+         
+    }
+
+    .container-fluid{ 
+        background-color:white;
+        height: 25px;
+        width: 25px;
+    }
+        
+    .navbar-toggler{
+        height: 30px;
+        width: 30px;
+    }
+
+    .collapse navbar-collapse{
+        background-color:white;
+        height: 25px;
+        width: 25px;
+    }
+
+    .navbar-toggler-icon{
+        background-color:white;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+/*RESPONSIVE TABLET*/
+
+@media (max-width: 990px) {
+    Header{
+        h1{ 
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 3vh;
+            margin-bottom: 3vh;
+            
+        }
+
+        height: 13vh;
+        margin-bottom: 16vh;
+    }
+
+    .container-fluid{ 
+        background-color: white;
+        height: 7vh;
+        width:  7wd;
+    }
+}
