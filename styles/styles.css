@@ -258,10 +258,8 @@ footer{
             width: auto;
         }
 
-        /* height: auto;
-        margin-bottom: 22vh; */
-
-
+        height: auto;
+        margin-bottom: 22vh;
     }
 
     .container-fluid{
@@ -349,7 +347,7 @@ footer{
 }
 
 
-/*@media (max-width: 990px) {
+@media (max-width: 990px) {
     Header{
         h1{
             font-size: 30px;
@@ -382,9 +380,9 @@ footer{
         height: 20px;
     }
 
-    /* MARCAS */
+    /*MARCAS*/
 
-    /*h2-1{
+    h2-1{
         font-size: 33px;
         font-weight: bolder;
         margin-top: 0vh;
@@ -421,4 +419,4 @@ footer{
         padding: 10px 0px;
     }
 
-}*/
+}
