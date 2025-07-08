@@ -1,0 +1,158 @@
+// ======================
+// VARIABLES
+// ======================
+$color-principal: #ff0026;
+$color-secundario: #ff6a03;
+$color-borde: #ffb600;
+$color-texto: white;
+
+$font-principal: "Open Sans";
+
+// ======================
+// MIXINS
+// ======================
+@mixin flex($justify: space-between, $align: center, $direction: row wrap) {
+  display: flex;
+  flex-flow: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin texto-bold($size, $color: $color-texto) {
+  color: $color;
+  font-size: $size;
+  font-weight: bold;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 375px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 990px) {
+      @content;
+    }
+  }
+}
+
+// HEADER
+
+header {
+  background-color: $color-principal;
+  height: auto;
+  @include flex();
+
+  h1 {
+    @include texto-bold(40px);
+    margin-top: 4vh;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  .logo {
+    margin-top: 5px;
+    height: 10vh;
+    width: auto;
+  }
+
+  .nav-item {
+    background-color: white;
+    height: 30px;
+    width: 100px;
+    font-size: 15px;
+    list-style: none;
+    border: 3px solid $color-borde;
+    border-radius: 50px;
+  }
+
+  .nav-link {
+    color: $color-secundario;
+    font-weight: bold;
+    padding: 0 20px;
+  }
+
+  // MOBILE
+
+  @include responsive(mobile) {
+    justify-content: space-evenly;
+    height: auto;
+    
+    h1 {
+      font-size: 15px;
+      margin-top: 1vh;
+    }
+
+    .logo {
+       height: 8vh;
+        width: auto;
+    }
+
+    .nav-item {
+      height: 20px;
+      width: 80px;
+      font-size: 13px;
+      border: 2px solid $color-borde;
+      border-radius: 10px;
+    }
+
+    .nav-link {
+      padding: 0 10px;
+    }
+  }
+
+  // ========== TABLET ==========
+  @include responsive(tablet) {
+    height: auto;
+    
+    h1 {
+      font-size: 30px;
+      margin: 3vh 0;
+    }
+  }
+}
+
+// ======================
+// NAVBAR COMPONENTES
+// ======================
+
+.container-fluid {
+    background-color: $color-principal;
+    Height:13vh;
+    @include responsive(mobile) {
+    background-color: $color-principal;
+    height: auto;
+    width: 25px;
+  }
+
+  @include responsive(tablet) {
+    background-color: $color-principal;
+    height: auto;
+    width: 7vw;
+  }
+}
+
+.navbar-toggler {
+  @include responsive(mobile) {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.collapse.navbar-collapse {
+  @include responsive(mobile) {
+    background-color: white;
+    height: 25px;
+    width: 25px;
+  }
+}
+
+.navbar-toggler-icon {
+  @include responsive(mobile) {
+    background-color: white;
+    height: 20px;
+    width: 20px;
+  }
+}

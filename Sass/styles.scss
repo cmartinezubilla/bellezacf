@@ -1,9 +1,8 @@
-// VARIABLES //
-$font: 'Open Sans', sans-serif;
-$color-rojo: #ff0026;
-$color-naranja: #ff6a03;
-$color-amarillo: #ffb600;
-$color-blanco: white;
+@use "footer";
+@use "main";
+@use "variables";
+@use "header";
+
 
 // MIXINS //
 @mixin mobile {
@@ -19,306 +18,26 @@ $color-blanco: white;
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: $font;
-}
-
-// HEADER //
-header {
-  background-color: $color-rojo;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  height: 16vh;
-
-  h1 {
-    color: $color-blanco;
-    font-size: 40px;
-    font-weight: bold;
-    margin-top: 4vh;
-  }
-
-  ul {
-    display: flex;
-  }
-
-  .logo {
-    margin-top: 5px;
-    height: 10vh;
-    width: auto;
-  }
-
-  .nav-item {
-    background-color: $color-blanco;
-    height: 30px;
-    width: 100px;
-    font-size: 15px;
-    list-style: none;
-    border: 3px solid $color-amarillo;
-    border-radius: 50px;
-  }
-
-  .nav-link {
-    color: $color-naranja;
-    font-weight: bold;
-    padding: 0 20px;
-  }
-
-  @include mobile {
-    justify-content: space-evenly;
-
-    h1 {
-      font-size: 17px;
-      margin-top: 1vh;
-    }
-
-    .logo {
-      height: 7vh;
-    }
-
-    .nav-item {
-      height: 20px;
-      width: 80px;
-      font-size: 13px;
-      border: 2px solid $color-amarillo;
-      border-radius: 10px;
-    }
-
-    .nav-link {
-      padding: 0 10px;
-    }
-  }
-}
-
-.container-fluid {
-  background-color: $color-rojo;
-  height: 14vh;
-
-  @include mobile {
-    height: 30px;
-  }
-}
-
-// MAIN //
-main {
-  display: flex;
-  flex-flow: column;
-  margin: 20px 0;
-
-  h5 {
-    color: $color-blanco;
-    font-weight: bold;
-    background-color: $color-naranja;
-    justify-content: center;
-    justify-items: center;
-    font-size: 25px;
-  }
-
-  p {
-    color: $color-blanco;
-    background-color: $color-rojo;
-    font-size: 20px;
-  }
-
-  @include mobile {
-    h5 { font-size: 15px; }
-    p { font-size: 10px; }
-  }
-}
-
-// IMAGEN CARRUSEL //
-.imagen-carrusel {
-  display: flex;
-  flex-flow: column;
-  height: 75vh;
-  width: 60vw;
-  justify-content: center;
-  justify-self: center;
-
-  @include mobile {
-    height: 40vh;
-    width: 100vw;
-  }
-}
-
-// TITULOS //
-.h2-1 {
-  color: $color-naranja;
-  font-size: 35px;
-  font-weight: bolder;
-  justify-self: center;
-  align-self: center;
-  margin-top: 3vh;
-
-  @include mobile {
-    font-size: 25px;
-    margin-top: 0;
-  }
-}
-
-.h2-2 {
-  color: $color-rojo;
-  font-size: 30px;
-  justify-self: center;
-  margin-bottom: 3vh;
-  align-self: center;
-
-  @include mobile {
-    font-size: 20px;
-    margin-bottom: 5vh;
-  }
-}
-
-// FOOTER //
-footer {
-  background-color: $color-rojo;
-  height: 7vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  h3 {
-    color: $color-blanco;
-    font-size: 15px;
-    font-weight: bold;
-  }
-
-  .img {
-    height: 40px;
-  }
-
-  @include mobile {
-    height: 5vh;
-
-    h3 { font-size: 10px; }
-    .img { height: 25px; }
-  }
-}
-
-
-.rrss {
-  display: flex;
-  justify-content: end;
-}
-
-// PAGINA MARCAS//
-.marcas {
-  margin: 20px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-
-  @include mobile {
-    margin-bottom: 15px;
-    gap: 10px;
-  }
-}
-
-.imagen-marcas {
-  height: auto;
-  width: 20vw;
-
-  @include mobile {
-    height: 30vh;
-    width: 60vw;
-  }
-}
-
-// PREUNIC //
-.imagen-carrusel-2 {
-  display: flex;
-  flex-flow: column;
-  height: 75vh;
-  width: auto;
-  justify-content: center;
-  justify-self: center;
-}
-
-// BLOG //
-.imagen-blog {
-  margin: 7vh 0;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  @include mobile {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-.entrada {
-  height: 30vh;
-  width: 25vw;
-}
-
-.boton-sus {
-  color: $color-blanco;
-  font-weight: bold;
-  background-color: $color-rojo;
-  height: 30px;
-  width: 150px;
-  font-size: 15px;
-  padding: 0 30px;
-  border: 3px solid orange;
-  border-radius: 50px;
-  display: flex;
-  align-self: center;
-  margin-bottom: 3vh;
-}
-
-// CONTACTO //
-.formulario {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 5px solid orange;
-  width: 500px;
-  justify-self: center;
-
-  @include mobile {
-    width: 300px;
-    padding: 10px 0;
-  }
-}
-
-.boton-formulario {
-  display: flex;
-  justify-self: center;
-  color: $color-blanco;
-  font-weight: bold;
-  background-color: $color-rojo;
-  height: 30px;
-  width: 100px;
-  font-size: 15px;
-  padding: 0 25px;
-  border: 3px solid orange;
-  border-radius: 50px;
-  margin-top: 1vh;
-
-  &:hover {
+.boton-formulario:hover{ /*falta en responsive*/
     animation: vibrate 0.5s infinite;
-  }
-
-  @include mobile {
-    margin-top: 2vh;
-    margin-bottom: 1vh;
-  }
 }
 
+@keyframes vibrate{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(5px);
+    }
+    50%{
+        transform: translateX(0);
+    }
 
-@keyframes vibrate {
-  0%, 50%, 100% {
-    transform: translateX(0);
-  }
-  25%, 75% {
-    transform: translateX(5px);
-  }
+    75%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
+

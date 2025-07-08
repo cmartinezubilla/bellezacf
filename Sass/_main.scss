@@ -1,0 +1,178 @@
+// VARIABLES
+
+$color-rojo: #ff0026;
+$color-naranja: #ff6a03;
+$color-amarillo: #ffb600;
+$color-blanco: white;
+$color-borde: orange;
+
+$mq-mobile: 375px;
+$mq-tablet: 990px;
+
+// MIXINS
+
+@mixin mobile {
+  @media (max-width: $mq-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $mq-tablet) {
+    @content;
+  }
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+
+  h5 {
+    color: $color-blanco;
+    font-weight: bold;
+    background-color: $color-naranja;
+    justify-content: center;
+    justify-items: center;
+    width: auto;
+    font-size: 25px;
+  }
+
+  p {
+    color: $color-blanco;
+    background-color: $color-rojo;
+    font-size: 20px;
+  }
+
+  @include mobile {
+    h5 { font-size: 15px; }
+    p { font-size: 10px; }
+  }
+
+  @include tablet {
+    h5 { font-size: 20px; }
+    p { font-size: 15px; }
+  }
+}
+
+// TITULOS
+
+.h2-1, .h2-2 {
+  justify-self: center;
+  align-self: center;
+}
+
+.h2-1 {
+  color: $color-naranja;
+  font-size: 35px;
+  font-weight: bolder;
+  margin-top: 3vh;
+
+  @include mobile {
+    font-size: 25px;
+    margin-top: 0;
+  }
+
+  @include tablet {
+    font-size: 33px;
+    margin-top: 0;
+  }
+}
+
+.h2-2 {
+  color: $color-rojo;
+  font-size: 30px;
+  margin-bottom: 3vh;
+
+  @include mobile {
+    font-size: 20px;
+    margin-bottom: 5vh;
+  }
+
+  @include tablet {
+    font-size: 28px;
+  }
+}
+
+// MARCAS
+
+.marcas {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+
+  @include mobile {
+    margin-bottom: 15px;
+    gap: 10px;
+  }
+
+  @include tablet {
+    margin-bottom: 10vh;
+  }
+}
+
+.imagen-marcas {
+  height: auto;
+  width: 20vw;
+
+  @include mobile {
+    height: 30vh;
+    width: 60vw;
+  }
+
+  @include tablet {
+    height: 30vh;
+    width: 30vw;
+  }
+}
+
+
+// BLOG
+
+.imagen-blog {
+  margin: 7vh 0;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  @include tablet {
+    gap: 5px;
+  }
+}
+
+.entrada {
+  height: 30vh;
+  width: 25vw;
+}
+
+
+// FORMULARIO CONTACTO
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid $color-borde;
+  width: 500px;
+  justify-self: center;
+
+  @include mobile {
+    width: 300px;
+    padding: 10px 0;
+  }
+
+  @include tablet {
+    padding: 10px 0;
+  }
+}
+
+
