@@ -3,6 +3,8 @@
 $color-rojo: #ff0026;
 $color-blanco: #fff;
 $font-principal: "Open Sans";
+$mw-mobile: 480px;
+$mw-tablet: 900px;
 
 // MIXINS
 
@@ -18,16 +20,15 @@ $font-principal: "Open Sans";
   font-weight: bold;
 }
 
-@mixin responsive($breakpoint) {
-  @if $breakpoint == mobile {
-    @media (max-width: 375px) {
-      @content;
-    }
+@mixin mobile {
+  @media (max-width: $mw-mobile) {
+    @content;
   }
-  @else if $breakpoint == tablet {
-    @media (max-width: 990px) {
-      @content;
-    }
+}
+
+@mixin tablet {
+  @media (max-width: $mw-tablet) {
+    @content;
   }
 }
 
@@ -45,7 +46,7 @@ footer {
   }
 
   // Responsive Mobile
-  @include responsive(mobile) {
+  @include mobile {
     height: 5vh;
 
     h3 {
@@ -58,7 +59,7 @@ footer {
   }
 
   // Responsive Tablet
-  @include responsive(tablet) {
+  @include tablet {
     height: 8vh;
 
     h3 {
@@ -72,7 +73,7 @@ footer {
   justify-content: end;
 }
 
-@include responsive(tablet) {
+@include tablet {
   .img {
     height: 20px;
   }
