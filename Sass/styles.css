@@ -14,7 +14,7 @@ footer h3 {
 footer .img {
   height: 40px;
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   footer {
     height: 5vh;
   }
@@ -64,7 +64,7 @@ main p {
   background-color: #ff0026;
   font-size: 20px;
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   main h5 {
     font-size: 15px;
   }
@@ -92,7 +92,7 @@ main p {
   font-weight: bolder;
   margin-top: 3vh;
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .h2-1 {
     font-size: 25px;
     margin-top: 0;
@@ -110,7 +110,7 @@ main p {
   font-size: 30px;
   margin-bottom: 3vh;
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .h2-2 {
     font-size: 20px;
     margin-bottom: 5vh;
@@ -129,7 +129,7 @@ main p {
   justify-content: center;
   gap: 15px;
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .marcas {
     margin-bottom: 15px;
     gap: 10px;
@@ -145,7 +145,7 @@ main p {
   height: auto;
   width: 20vw;
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .imagen-marcas {
     height: 30vh;
     width: 60vw;
@@ -165,7 +165,7 @@ main p {
   flex-wrap: wrap;
   justify-content: center;
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .imagen-blog {
     flex-direction: column;
   }
@@ -190,7 +190,7 @@ main p {
   width: 500px;
   justify-self: center;
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .formulario {
     width: 300px;
     padding: 10px 0;
@@ -278,7 +278,7 @@ header .nav-link {
   font-weight: bold;
   padding: 0 20px;
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   header {
     justify-content: space-evenly;
     height: auto;
@@ -316,7 +316,7 @@ header .nav-link {
   background-color: #ff0026;
   Height: 13vh;
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .container-fluid {
     background-color: #ff0026;
     height: auto;
@@ -331,14 +331,14 @@ header .nav-link {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .navbar-toggler {
     height: 30px;
     width: 30px;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .collapse.navbar-collapse {
     background-color: white;
     height: 25px;
@@ -346,7 +346,7 @@ header .nav-link {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .navbar-toggler-icon {
     background-color: white;
     height: 20px;
