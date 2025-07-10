@@ -7,9 +7,22 @@ $color-amarillo: #ffb600;
 $color-blanco: white;
 $color-borde: orange;
 
+
 $mq-mobile: 375px;
 $mq-tablet: 990px;
 
+@mixin mobile {
+  @media (max-width: $mw-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $mw-tablet) {
+    @content;
+  }
+
+}
 // IMPORT
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
@@ -55,13 +68,31 @@ $mq-tablet: 990px;
     justify-content: center;
     justify-self: center;
 
-//     @include mobile {
-//         height: 40vh;
-//         width: 100vw;
-//     }
+    @include mobile {
+      height: 40vh;
+      width: 100vw;
+    }
 }
 
 .imagen-carrusel-2{
     @extend .imagen-carrusel;
     width: auto;
+    @include mobile{
+      h5{
+        font-size: 15px; 
+        display: block;
+      }
+      p{
+        font-size: 10px; 
+        display: block;
+      }
+    } 
+    @include tablet{
+      h5{
+        font-size: 20px; 
+      }
+      p{
+        font-size: 15px; 
+      }
+    }
 }
