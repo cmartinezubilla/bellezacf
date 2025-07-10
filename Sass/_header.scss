@@ -8,6 +8,8 @@ $color-texto: white;
 
 $font-principal: "Open Sans";
 
+$mw-mobile: 480px;
+$mw-tablet: 900px;
 // ======================
 // MIXINS
 // ======================
@@ -24,16 +26,17 @@ $font-principal: "Open Sans";
   font-weight: bold;
 }
 
-@mixin responsive($breakpoint) {
-  @if $breakpoint == mobile {
-    @media (max-width: 375px) {
-      @content;
-    }
-  } @else if $breakpoint == tablet {
-    @media (max-width: 990px) {
-      @content;
-    }
+@mixin mobile {
+  @media (max-width: $mw-mobile) {
+    @content;
   }
+}
+
+@mixin tablet {
+  @media (max-width: $mw-tablet) {
+    @content;
+  }
+
 }
 
 // HEADER
@@ -76,7 +79,7 @@ header {
 
   // MOBILE
 
-  @include responsive(mobile) {
+  @include mobile {
     justify-content: space-evenly;
     height: auto;
     
@@ -104,7 +107,7 @@ header {
   }
 
   // ========== TABLET ==========
-  @include responsive(tablet) {
+  @include tablet {
     height: auto;
     
     h1 {
@@ -121,13 +124,13 @@ header {
 .container-fluid {
     background-color: $color-principal;
     Height:13vh;
-    @include responsive(mobile) {
+    @include mobile {
     background-color: $color-principal;
     height: auto;
     width: 25px;
   }
 
-  @include responsive(tablet) {
+  @include tablet {
     background-color: $color-principal;
     height: auto;
     width: 7vw;
@@ -135,14 +138,14 @@ header {
 }
 
 .navbar-toggler {
-  @include responsive(mobile) {
+  @include mobile {
     height: 30px;
     width: 30px;
   }
 }
 
 .collapse.navbar-collapse {
-  @include responsive(mobile) {
+  @include mobile {
     background-color: white;
     height: 25px;
     width: 25px;
@@ -150,7 +153,7 @@ header {
 }
 
 .navbar-toggler-icon {
-  @include responsive(mobile) {
+  @include mobile {
     background-color: white;
     height: 20px;
     width: 20px;
