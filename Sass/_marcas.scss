@@ -1,0 +1,53 @@
+@use "variables" as v;
+@use "main";
+
+main {
+    h5 {
+    color: v.$color-blanco;
+    font-weight: bold;
+    background-color: v.$color-naranjo;
+    justify-content: center;
+    justify-items: center;
+    width: auto;
+    font-size: 28px;
+  }
+  @extend .h2-1;
+    margin-top: 5vh;
+    @include v.mobile {
+        font-size: 20px;
+    margin-top: 0;
+    }
+    
+}
+
+.marcas {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  // @include v.mobile {
+  //   flex-direction: column;
+  //   padding: 0 40px;
+  // }
+
+  @include v.tablet {
+    margin-bottom: 4vh;
+  }
+}
+
+.imagen-marcas {
+  height: auto;
+  width: 20vw;
+
+  // @include v.mobile {
+  //   height: auto;
+  //   width: 75vw;
+  // }
+
+  @include v.tablet {
+    height: 30vh;
+    width: 30vw;
+  }
+}
+

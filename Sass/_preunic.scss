@@ -1,0 +1,18 @@
+@use "variables" as v;
+@use "main";
+
+
+.imagen-carrusel-2{
+    @extend .imagen-carrusel;
+    height: 65vh;
+    width: auto;
+    @include v.tablet{
+      h5{
+        font-size: 20px;
+        padding: 0 50px;
+      }
+      p{
+        font-size: 15px;
+      }
+    }
+}

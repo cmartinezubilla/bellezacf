@@ -1,0 +1,48 @@
+@use "variables" as v;
+@use "main";
+@use "contacto";
+
+
+.imagen-blog {
+  margin-top: 2vh;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.entrada {
+  height: 40vh;
+  width: 25vw;
+}
+
+.boton-sus{
+    @extend .boton;
+    align-self: center;
+    padding: 0 30px;
+    margin-top: 0vh;
+}
+
+
+.boton-sus:hover{
+    animation: vibrate 0.5s infinite;
+}
+
+@keyframes vibrate{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(5px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+
+    75%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}

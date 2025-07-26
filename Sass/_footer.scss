@@ -1,65 +1,23 @@
 // VARIABLES
 
-$color-rojo: #ff0026;
-$color-blanco: #fff;
-$font-principal: "Open Sans";
-$mw-mobile: 480px;
-$mw-tablet: 900px;
-
-// MIXINS
-
-@mixin flex-between-center {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@mixin text-bold-white($size) {
-  color: $color-blanco;
-  font-size: $size;
-  font-weight: bold;
-}
-
-@mixin mobile {
-  @media (max-width: $mw-mobile) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media (max-width: $mw-tablet) {
-    @content;
-  }
-}
+@use "variables" as v;
 
 footer {
-  background-color: $color-rojo;
+  background-color: v.$color-rojo;
   height: 7vh;
-  @include flex-between-center;
+  @include v.flex-between-center;
 
   h3 {
-    @include text-bold-white(15px);
+    @include v.text-bold-white(15px);
   }
 
   .img {
     height: 40px;
   }
 
-  // Responsive Mobile
-  @include mobile {
-    height: 5vh;
+  // Tablet
 
-    h3 {
-      font-size: 10px;
-    }
-
-    .img {
-      height: 25px;
-    }
-  }
-
-  // Responsive Tablet
-  @include tablet {
+  @include v.tablet {
     height: 8vh;
 
     h3 {
@@ -73,7 +31,7 @@ footer {
   justify-content: end;
 }
 
-@include tablet {
+@include v.tablet {
   .img {
     height: 20px;
   }

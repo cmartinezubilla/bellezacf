@@ -1,54 +1,16 @@
-// ======================
 // VARIABLES
-// ======================
-$color-principal: #ff0026;
-$color-secundario: #ff6a03;
-$color-borde: #ffb600;
-$color-texto: white;
-
-$font-principal: "Open Sans";
-
-$mw-mobile: 480px;
-$mw-tablet: 900px;
-// ======================
-// MIXINS
-// ======================
-@mixin flex($justify: space-between, $align: center, $direction: row wrap) {
-  display: flex;
-  flex-flow: $direction;
-  justify-content: $justify;
-  align-items: $align;
-}
-
-@mixin texto-bold($size, $color: $color-texto) {
-  color: $color;
-  font-size: $size;
-  font-weight: bold;
-}
-
-@mixin mobile {
-  @media (max-width: $mw-mobile) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media (max-width: $mw-tablet) {
-    @content;
-  }
-
-}
+@use "variables" as v;
 
 // HEADER
 
 header {
-  background-color: $color-principal;
-  height: auto;
-  @include flex();
+  background-color: v.$color-rojo;
+  height: 15vh;
+  @include v.flex();
 
   h1 {
-    @include texto-bold(40px);
-    margin-top: 4vh;
+    @include v.texto-bold(38px);
+    margin-top: 2vh;
   }
 
   ul {
@@ -56,106 +18,58 @@ header {
   }
 
   .logo {
-    margin-top: 5px;
+    margin-top: 2vh;
     height: 10vh;
     width: auto;
   }
 
   .nav-item {
-    background-color: white;
-    height: 30px;
-    width: 100px;
-    font-size: 15px;
+    background-color:white;
+    height: 40px;
+    width: 110px;
+    font-size: 18px;
     list-style: none;
-    border: 3px solid $color-borde;
+    border: 5px solid v.$color-naranjo;
     border-radius: 50px;
   }
 
   .nav-link {
-    color: $color-secundario;
+    color: v.$color-naranjo;
     font-weight: bold;
-    padding: 0 20px;
+    padding: 2px 20px;
   }
 
-  // MOBILE
+  // TABLET
 
-  @include mobile {
-    justify-content: space-evenly;
+  @include v.tablet {
     height: auto;
-    
     h1 {
-      font-size: 15px;
+      @include v.texto-bold(38px);
+    }
+    .nav-item{
+      font-size: 17px;
+      border: 3px solid v.$color-naranjo;
+      border-radius: 20px;
       margin-top: 1vh;
     }
-
-    .logo {
-       height: 8vh;
-        width: auto;
-    }
-
-    .nav-item {
-      height: 20px;
-      width: 80px;
-      font-size: 13px;
-      border: 2px solid $color-borde;
-      border-radius: 10px;
-    }
-
     .nav-link {
-      padding: 0 10px;
-    }
-  }
-
-  // ========== TABLET ==========
-  @include tablet {
-    height: auto;
-    
-    h1 {
-      font-size: 30px;
-      margin: 3vh 0;
+      padding: 0 5px 0 15px;
     }
   }
 }
 
-// ======================
 // NAVBAR COMPONENTES
-// ======================
 
 .container-fluid {
-    background-color: $color-principal;
-    Height:13vh;
-    @include mobile {
-    background-color: $color-principal;
-    height: auto;
-    width: 25px;
-  }
-
-  @include tablet {
-    background-color: $color-principal;
-    height: auto;
-    width: 7vw;
-  }
+    @include v.tablet {
+      height: auto;
+      width: 60px;
+    }
 }
 
 .navbar-toggler {
-  @include mobile {
-    height: 30px;
-    width: 30px;
+  @include v.tablet{
+    margin-bottom: 1.5vh;
   }
 }
 
-.collapse.navbar-collapse {
-  @include mobile {
-    background-color: white;
-    height: 25px;
-    width: 25px;
-  }
-}
-
-.navbar-toggler-icon {
-  @include mobile {
-    background-color: white;
-    height: 20px;
-    width: 20px;
-  }
-}

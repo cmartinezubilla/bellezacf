@@ -2,11 +2,17 @@
 @use "main";
 @use "variables";
 @use "header";
+@use "marcas";
+@use "preunic";
+@use "blog";
+@use "contacto";
+@use "mobile";
+
 
 
 // MIXINS //
 @mixin mobile {
-  @media (max-width: 375px) {
+  @media (max-width: 390px) {
     @content;
   }
 }
@@ -18,26 +24,4 @@
 }
 
 
-.boton-formulario:hover{ /*falta en responsive*/
-    animation: vibrate 0.5s infinite;
-}
-
-@keyframes vibrate{
-    0%{
-        transform: translateX(0);
-    }
-    25%{
-        transform: translateX(5px);
-    }
-    50%{
-        transform: translateX(0);
-    }
-
-    75%{
-        transform: translateX(5px);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
 
